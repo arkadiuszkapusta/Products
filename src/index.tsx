@@ -1,14 +1,22 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import App from './app';
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+import { BrowserRouter } from "react-router-dom";
+import App from "./app";
 
 import CssBaseline from '@mui/material/CssBaseline';
 import { ThemeProvider } from '@mui/material/styles';
 import theme from './theme';
 
-ReactDOM.createRoot(document.getElementById('root')).render(
-    <ThemeProvider theme={ theme }>
-        <CssBaseline />
-        <App />
-    </ThemeProvider>,
+const rootElement = document.getElementById("root");
+const root = createRoot(rootElement);
+
+root.render(
+    <StrictMode>
+        <BrowserRouter>
+            <ThemeProvider theme={ theme }>
+                <CssBaseline />
+                <App />
+            </ThemeProvider>,
+        </BrowserRouter>
+    </StrictMode>
 );

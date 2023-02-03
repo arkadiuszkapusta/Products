@@ -1,25 +1,18 @@
 import React, { useState, useEffect } from 'react';
-import { Link, MemoryRouter, Route, Routes, useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from "react-router-dom";
 
 import getAllData from './api/getAllData';
-import {
-    Box,
-    Card,
-    CardContent,
-    CircularProgress,
-    Collapse,
-    Grid,
-    Pagination,
-    PaginationItem,
-    TextField,
-    Typography
-} from "@mui/material";
+import { Box, Card, CardContent, CircularProgress, Collapse, Grid, Pagination, PaginationItem, TextField, Typography} from "@mui/material";
 import AddIcon from '@mui/icons-material/Add';
 
 import './styles/styles.css'
 import '@fontsource/roboto/500.css';
 
 const App: React.FC = () => {
+
+    const location = useLocation();
+    const queryParams = new URLSearchParams(location.search);
+    const navigate = useNavigate();
 
     // api data
     const [data, setData] = useState<[{id: number, name: string, color: string, pantone_value: string, year: number}]>(null);
@@ -28,9 +21,11 @@ const App: React.FC = () => {
     // id searchable
     const [id, setId] = useState<number>(null);
     // pagination
-    const [page, setPage] = useState<number>(1);
+    const [page, setPage] = useState<number>( parseInt(queryParams.get("page")) || 0 );
     // show/hide data
     const [showId, setShowId] = useState<number | null>(null);
+    // error
+    const [error, setError] = useState("");
 
     useEffect(() => {
         const fetchData = async () => {
@@ -39,18 +34,19 @@ const App: React.FC = () => {
                 setData(response.data);
                 setLoading(false);
             } catch (error) {
-                console.error(error);
-                setLoading(false);
+                setError(error.message);
             }
         };
         fetchData();
     }, [ page ]);
 
-    if (loading) return (
-        <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh', width: '100vh' }}>
-            <CircularProgress />
-        </Box>
-    )
+    if (loading) {
+        return (
+            <Box sx={{display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh', width: '100vh'}}>
+                <CircularProgress/>
+            </Box>
+        )
+    }
 
     const handleChangeSearch = (event) => {
         const inputValue = event.target.value;
@@ -61,13 +57,12 @@ const App: React.FC = () => {
 
     const handleChangePage = (event, page) => {
         setPage(page);
+        navigate({ pathname: "/", search: `?page=${page}` })
     };
 
     const handleShowData = ( id ) => {
         setShowId(showId === id ? null : id);
     };
-
-    console.log(data)
 
     return (
         <Grid
