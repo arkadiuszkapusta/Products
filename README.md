@@ -1,70 +1,63 @@
-# Getting Started with Create React App
+### Overview
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is designed to retrieve data from a specified API and present it in an organized and user-friendly manner. The main feature of the project is a paginated list of data, which allows for efficient browsing and easy navigation. Additionally, the list can be filtered by ID, making it possible to find specific items quickly and easily.
 
-## Available Scripts
+The project has been built using Javascript and TypeScript, ensuring efficient and robust code. TypeScript adds an additional layer of type checking, making it easier to catch and resolve errors before they become a problem. Material UI is providing a visually appealing and modern interface. The project conducted API tests, related to the fetch data, and the response to the lack of such data.
 
-In the project directory, you can run:
+### What's included
 
-### `npm start`
+List of technologies used in the project:
+- React, JavaScript, TypeScript, Prettier, ESLint
+- axios, used to make queries to the API
+- Jest, used to test the API
+- Material UI, used to build applications using ready-made components
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### App view
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Filter view
 
-### `npm test`
+!["Filter"](public/filter.png)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Pagination view
 
-### `npm run build`
+!["Pagination"](public/pagination.png)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### How install
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. Install Git on your computer if you have not already done so: https://git-scm.com/downloads
+2. Open the terminal and navigate to the location where you want to install the project.
+3. Clone the repository from GitHub by typing the following command:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```
+git clone https://github.com/arkadiuszkapusta/SPA-App.git
+```
 
-### `npm run eject`
+4. Go to the project directory and install all the dependencies that are required for the project to work by typing the following command:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```coffeescript
+npm install
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+5. Start the application by typing the following command:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```coffeescript
+npm start
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### License
 
-## Learn More
+This project is licensed under the permissive MIT License.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
-### Code Splitting
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Live view
 
-### Analyzing the Bundle Size
+...will be added in the future...
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Reporting issues
+Use the [CKEditor 4 GitHub issue page](https://github.com/arkadiuszkapusta/SPA-App/issues) to report bugs and feature requests.
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

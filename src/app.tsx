@@ -66,7 +66,7 @@ const App: React.FC = () => {
           direction="column"
           sx={{ width: 'full', justifyContent: 'center', alignItems: 'center', margin: '24px 0 24px 0' }}
         >
-            <Typography variant="h3" sx={{ textTransform: 'uppercase', fontWeight: 'bold', letterSpacing: '5px' }}> Dashboard </Typography>
+            <Typography variant="h3" sx={{ textTransform: 'uppercase', fontWeight: 'bold', letterSpacing: '5px' }}> Products </Typography>
             <TextField
               type="number"
               label="Filter by ID"

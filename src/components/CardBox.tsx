@@ -26,9 +26,9 @@ export const CardBox: React.FC<Props> = ({
   }
 
   return (
-      <Grid item xs={12} sx={{ justifyContent: 'center', alignItems: 'center' }}>
-        <Card sx={{ minWidth: 360, borderRadius: 2, display: 'flex', justifyContent: 'center', alignItems: 'center', margin: '0 0 12px 0' }} >
-          <CardContent sx={{ bgcolor: color, width: '100%', height: '100%', textAlign: 'center' }}>
+      <Grid item xs={12} sx={{ justifyContent: 'center', alignItems: 'center', padding: '0 0 24px 0' }}>
+        <Card sx={{ minWidth: 360, borderRadius: 2, display: 'flex', justifyContent: 'center', alignItems: 'center' }} >
+          <CardContent sx={{ bgcolor: color, width: '100%', height: '100%', textAlign: 'center', padding: '24px 0 24px 0' }}>
             <Typography variant="h6"> ID number: { id } </Typography>
             <Typography variant="h6"> Name: { name } </Typography>
             <Typography variant="h6"> Year: { year } </Typography>
