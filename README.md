@@ -12,15 +12,13 @@ List of technologies used in the project:
 - Jest, used to test the API
 - Material UI, used to build applications using ready-made components
 
-### App view
+### Live app view
 
-Filter view
+To check the performance of the application, you do not need to download the repository, just paste the following address in your browser:
 
-!["Filter"](public/filter.png)
-
-Pagination view
-
-!["Pagination"](public/pagination.png)
+```coffeescript
+chief-silk.surge.sh
+```
 
 ### How install
 
@@ -53,14 +51,6 @@ Permission is hereby granted, free of charge, to any person obtaining a copy of 
 The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-
-### Live view
-
-To check the performance of the application, you do not need to download the repository, just paste the following address in your browser:
-
-```coffeescript
-chief-silk.surge.sh
-```
 
 ### Reporting issues
 Use the [CKEditor 4 GitHub issue page](https://github.com/arkadiuszkapusta/SPA-App/issues) to report bugs and feature requests.
