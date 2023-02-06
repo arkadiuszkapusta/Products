@@ -56,7 +56,11 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 ### Live view
 
-...will be added in the future...
+To check the performance of the application, you do not need to download the repository, just paste the following address in your browser:
+
+```coffeescript
+chief-silk.surge.sh
+```
 
 ### Reporting issues
 Use the [CKEditor 4 GitHub issue page](https://github.com/arkadiuszkapusta/SPA-App/issues) to report bugs and feature requests.
