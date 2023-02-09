@@ -1,9 +1,9 @@
 import axios from 'axios'
-import getAllData from '../api/getAllData'
+import { getProducts } from '../api/getProducts'
 
 jest.mock('axios')
 
-describe('getAllData', () => {
+describe('getProducts', () => {
   it('fetches data from API and returns it', async () => {
     const response = {
       data: [
@@ -15,7 +15,7 @@ describe('getAllData', () => {
 
     (axios.get as jest.Mock).mockResolvedValue(response)
 
-    const result = await getAllData()
+    const result = await getProducts(1, 5)
 
     expect(axios.get).toHaveBeenCalledWith('https://reqres.in/api/products?page=1&per_page=5')
     expect(result).toEqual(response.data)
@@ -25,7 +25,7 @@ describe('getAllData', () => {
     (axios.get as jest.Mock).mockRejectedValue(new Error('API error'))
 
     try {
-      await getAllData()
+      await getProducts(1,5)
     } catch (error) {
       expect(error.message).toBe('An error occurred while fetching the data.')
     }

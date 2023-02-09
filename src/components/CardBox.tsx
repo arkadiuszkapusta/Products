@@ -1,50 +1,32 @@
 import type React from 'react'
-import { useState } from 'react'
-import { Card, CardContent, Collapse, Grid, Typography } from '@mui/material'
-import AddIcon from '@mui/icons-material/Add'
-import ClearIcon from '@mui/icons-material/Clear'
+import { v4 as uuid } from 'uuid'
 
-interface Props {
-  color: string
-  id: number
-  name: string
-  year: number
-  pantoneValue: string
-}
+import { Grid, Typography } from '@mui/material'
 
-export const CardBox: React.FC<Props> = ({
-  color,
-  id,
-  name,
-  year,
-  pantoneValue
-}): React.ReactElement => {
-  const [showId, setShowId] = useState<number | null>(null)
+import { type ProductProps } from '../types/product'
 
-  const handleShowData = (id): void => {
-    setShowId(showId === id ? null : id)
-  }
+export const CardBox: React.FC<ProductProps> = ({ color, id, name, year, pantone_value }): JSX.Element => {
+  const productData = [
+    { headline: '', value: 'Product Information' },
+    { headline: 'ID', value: id },
+    { headline: 'Name', value: name },
+    { headline: 'Year', value: year },
+    { headline: 'Color', value: color },
+    { headline: 'Pantone', value: pantone_value }
+  ]
 
   return (
-      <Grid item xs={12} sx={{ justifyContent: 'center', alignItems: 'center', padding: '0 0 24px 0' }}>
-        <Card sx={{ minWidth: 360, borderRadius: 2, display: 'flex', justifyContent: 'center', alignItems: 'center' }} >
-          <CardContent sx={{ bgcolor: color, width: '100%', height: '100%', textAlign: 'center', padding: '24px 0 24px 0' }}>
-            <Typography variant="h6"> ID number: { id } </Typography>
-            <Typography variant="h6"> Name: { name } </Typography>
-            <Typography variant="h6"> Year: { year } </Typography>
-            {
-              showId === id && (
-                <Collapse in timeout="auto" unmountOnExit>
-                  <Typography variant="h6"> Pantone value: { pantoneValue } </Typography>
-                  <Typography variant="h6"> Color: { color } </Typography>
-                </Collapse>
-              )
-              }
-            {
-              showId === null ? <AddIcon onClick={() => { handleShowData(id) }} /> : <ClearIcon onClick={() => { handleShowData(id) }} />
-            }
-          </CardContent>
-        </Card>
+    <Grid item xs={12} sx={{ justifyContent: 'center', alignItems: 'center', padding: '24px 0 0 0' }}>
+      <Grid container sx={{ bgcolor: color, width: '100%', height: '100%', textAlign: 'center', borderRadius: 2, padding: '10px 0 10px 0' }}>
+        {
+          productData.map(data => (
+            <Grid key={uuid()} item xs={2}>
+              <Typography variant="h6" sx={{ textTransform: 'uppercase', fontWeight: 'bold', textAlign: 'center' }}> { data.headline } </Typography>
+              <Typography variant="h6"> { data.value } </Typography>
+            </Grid>
+          ))
+        }
       </Grid>
+    </Grid>
   )
 }

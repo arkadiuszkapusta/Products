@@ -2,19 +2,19 @@
 
 This project is designed to retrieve data from a specified API and present it in an organized and user-friendly manner. The main feature of the project is a paginated list of data, which allows for efficient browsing and easy navigation. Additionally, the list can be filtered by ID, making it possible to find specific items quickly and easily.
 
-The project has been built using Javascript and TypeScript, ensuring efficient and robust code. TypeScript adds an additional layer of type checking, making it easier to catch and resolve errors before they become a problem. Material UI is providing a visually appealing and modern interface. The project conducted API tests, related to the fetch data, and the response to the lack of such data.
+The project has been built using TypeScript, ensuring efficient and robust code. TypeScript adds an additional layer of type checking, making it easier to catch and resolve errors before they become a problem. Material UI is providing a visually appealing and modern interface. The project conducted API tests, related to the fetch data, and the response to the lack of such data.
 
 ### What's included
 
 List of technologies used in the project:
-- React, JavaScript, TypeScript, Prettier, ESLint
+- React, TypeScript, Prettier, ESLint
 - axios, used to make queries to the API
 - Jest, used to test the API
 - Material UI, used to build applications using ready-made components
 
 ### Live app view
 
-To check the performance of the application, you do not need to download the repository, just paste the following address in your browser:
+To check the application, you do not need to download the repository, just paste the following address in your browser:
 
 ```coffeescript
 chief-silk.surge.sh
